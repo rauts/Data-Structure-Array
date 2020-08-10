@@ -1,7 +1,7 @@
 #include "Array.h"
 
 Array::Array(int size) {
-	mSize = size;
+	mArraySize = size;
 	int *mPtr = new int[size];
 }
 
@@ -10,13 +10,16 @@ Array::~Array() {
 }
 
 int Array::Size() const {
-	return mSize;
+	return mArraySize;
 }
 
 bool Array::IsEmpty() const {
-	return (mSize == 0) && (mPtr == nullptr);
+	return (mArraySize == 0) && (mPtr == nullptr);
 }
 
 // TO DO
 void Array::PrintArray() const {}
 
+bool Array::IsmPtrNull() const {
+	return mPtr == nullptr;
+}
