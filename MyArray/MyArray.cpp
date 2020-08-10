@@ -8,8 +8,8 @@ int main()
 {
     TestDefaultConstructor();
 
-    /*TestParametricConstructor();
-    TestDestructor();*/
+    TestParametricConstructor();
+   
 
 }
 
