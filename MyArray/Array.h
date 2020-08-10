@@ -12,8 +12,8 @@ private:
 	
 	// declare data members
 	
-	int mArraySize{};
-	int* mPtr{ nullptr };
+	int mArraySize{0};
+	int* mPtr{ nullptr }; // integer pointer pointing to nothing; it needs an address
 
 public:
 	
@@ -23,7 +23,7 @@ public:
 
 	// parameterized constructor
 
-	Array(int size);
+	explicit Array(int size);
 
 	// destructor
 
