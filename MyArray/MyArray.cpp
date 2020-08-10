@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include "ArrayTest.h"
 
 int main()
 {
-    std::cout << "Empty!\n";
+    TestDefaultConstructor();
+
+    /*TestParametricConstructor();
+    TestDestructor();*/
 
 }
 
