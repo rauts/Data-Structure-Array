@@ -1,8 +1,10 @@
 #include "Array.h"
 
 Array::Array(int size) {
-	mArraySize = size;
-	int *mPtr = new int[size];
+	if (size != 0) {
+		mArraySize = size;
+		mPtr = new int[mArraySize] {};
+	}
 }
 
 Array::~Array() {
