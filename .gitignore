@@ -1,0 +1,4 @@
+# ignore the folder MyArray 
+./MyArray
+# don't ignore the file MyArray.cpp in the folder Myarray
+!/MyArray/MyArray.cpp
