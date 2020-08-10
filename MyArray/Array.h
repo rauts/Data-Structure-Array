@@ -1,14 +1,18 @@
 #pragma once
-// First create a class for integer type data. Once it works with integer data
-// type then change the class to class template for generic data type.
-// 
+
+#include<iostream>
+
+// First create a class for integer type data. Once it works with an 
+// integer data type then change the class to class template for generic
+// data type.
+ 
 class Array
 {
 private:
 	
 	// declare data members
 	
-	int mSize{};
+	int mArraySize{};
 	int* mPtr{ nullptr };
 
 public:
@@ -29,8 +33,11 @@ public:
 	// define public interface
 	
 	int Size() const;
-	bool isEmpty() const;
+	bool IsEmpty() const;
 	void PrintArray() const;
+	bool IsmPtrNull() const;
+
+	//friend std::ostream& operator <<(std::ostream& os, const Array& arr);
 
 };
 
