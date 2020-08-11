@@ -82,3 +82,29 @@ void TestCopyConstructor() {
 	cout << "\n--------------------------------------\n";
 
 }
+
+void TestAssignmentOperator() {
+	Array arr{ 3 };
+	if (arr.Size() > 0) {
+		for (auto element{ 0 }; element < arr.Size(); element++) {
+			arr[element] = element + 1;
+		}
+	}
+	assert(arr[0] == 1);
+	assert(!arr.IsEmpty());
+
+	cout << "Before arr = " << arr << '\n';
+
+	Array arr2{};
+	arr2 = arr; // default assignment operator is called
+	assert(!arr2.IsEmpty());
+	assert(arr2[1] == 2);
+	assert(arr2.Size() == arr.Size());
+	cout << "After assignement operator arr2 = " << arr2 << '\n';
+
+
+	cout << "\n--------------------------------------\n";
+	cout << "Assignment Operator (=) Test: Passed!";
+	cout << "\n--------------------------------------\n";
+
+}
