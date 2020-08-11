@@ -20,7 +20,10 @@ int main()
     //TestCopyConstructor();
 
     //TestAssignmentOperator();
-    TestMoveConstructor();
+
+    //TestMoveConstructor();
+
+    TestMoveAssignmentOperator();
 
     return 0;
 
