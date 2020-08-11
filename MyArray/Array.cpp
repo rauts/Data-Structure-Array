@@ -51,6 +51,21 @@ Array::Array(Array const& arr)
 	}
 }
 
+Array& Array::operator=(Array const& rhs)
+{
+	if (mPtr != rhs.mPtr) {
+		mArraySize = rhs.mArraySize;
+		// memory allocation
+		mPtr = nullptr;
+		mPtr = new int[mArraySize] {};
+		// elementwise copy
+		for (auto index{ 0 }; index < rhs.Size(); index++) {
+			mPtr[index] = rhs.mPtr[index];
+		}	
+	}
+	return *this;
+}
+
 //void Array::add_value(int index, int value) {
 //	mPtr[index] = value;
 //}
