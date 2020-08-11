@@ -25,3 +25,17 @@ void Array::PrintArray() const {}
 bool Array::IsmPtrNull() const {
 	return mPtr == nullptr;
 }
+
+// reading 
+int Array::operator[](const int index) const {	
+	return mPtr[index];
+}
+
+// writing
+int& Array::operator[](const int index) {
+	return mPtr[index];
+}
+
+//void Array::add_value(int index, int value) {
+//	mPtr[index] = value;
+//}
