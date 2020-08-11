@@ -25,3 +25,18 @@ void TestParametricConstructor() {
 }
 
 void TestDestructor() {}
+
+void TestSquareBracketOperator() {
+	Array arr{ 3 };
+	if (arr.Size() > 0) {
+		for (auto element{ 0 }; element < arr.Size(); element++) {		
+			arr[element] = element;
+		}	
+	}
+	assert(arr[2] == 2); 
+
+	cout << "\n--------------------------------------\n";
+	cout << "[] Operator Test: Passed!";
+	cout << "\n--------------------------------------\n";
+
+}
