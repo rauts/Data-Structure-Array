@@ -44,3 +44,4 @@ public:
 
 };
 
+std::ostream& operator <<(std::ostream& os, const Array& arr);
