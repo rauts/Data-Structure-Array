@@ -9,14 +9,17 @@ using std::cout;
 
 int main()
 {
-    TestDefaultConstructor();
+    //TestDefaultConstructor();
 
-    TestParametricConstructor();
-    
-    TestSquareBracketOperator(); // []
+    //TestParametricConstructor();
+    //
+    //TestSquareBracketOperator(); // []
 
-    TestIndirectionOperator(); // <<
+    //TestIndirectionOperator(); // <<
 
+    TestCopyConstructor();
+
+    return 0;
 
 }
 
