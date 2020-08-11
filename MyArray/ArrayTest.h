@@ -5,3 +5,4 @@ void TestParametricConstructor();
 void TestDestructor();
 void TestSquareBracketOperator();
 void TestIndirectionOperator();
+void TestCopyConstructor();
