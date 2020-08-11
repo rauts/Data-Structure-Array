@@ -44,6 +44,9 @@ public:
 	// copy constructors
 	Array(Array const& arr);
 
+	// copy assignment operator
+	Array& operator = (Array const& arr);
+
 };
 
 std::ostream& operator <<(std::ostream& os, const Array& arr);
