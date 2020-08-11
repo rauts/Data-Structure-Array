@@ -13,7 +13,9 @@ int main()
 
     TestParametricConstructor();
     
-    TestSquareBracketOperator();
+    TestSquareBracketOperator(); // []
+
+    TestIndirectionOperator(); // <<
 
 
 }
