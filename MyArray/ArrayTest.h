@@ -6,3 +6,4 @@ void TestDestructor();
 void TestSquareBracketOperator();
 void TestIndirectionOperator();
 void TestCopyConstructor();
+void TestAssignmentOperator();
