@@ -108,3 +108,29 @@ void TestAssignmentOperator() {
 	cout << "\n--------------------------------------\n";
 
 }
+
+void TestMoveConstructor() {
+	Array arr{ 3 };
+	if (arr.Size() > 0) {
+		for (auto element{ 0 }; element < arr.Size(); element++) {
+			arr[element] = element + 1;
+		}
+	}
+	assert(arr[0] == 1);
+	assert(!arr.IsEmpty());
+
+	cout << "Before arr = " << arr << '\n';
+
+	Array arr2{ std::move(arr) };
+	assert(!arr2.IsEmpty());
+	assert(arr2[1] == 2);
+	assert(arr.IsEmpty());
+
+	cout << "After move constructor arr2 = " << arr2 << '\n';
+
+
+	cout << "\n--------------------------------------\n";
+	cout << "Move Constructor Test: Passed!";
+	cout << "\n--------------------------------------\n";
+
+}
