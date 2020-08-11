@@ -40,3 +40,22 @@ void TestSquareBracketOperator() {
 	cout << "\n--------------------------------------\n";
 
 }
+
+void TestIndirectionOperator() {
+	Array arr{ 5 };		
+	if (arr.Size() > 0) {
+		for (auto element{ 0 }; element < arr.Size(); element++) {
+			arr[element] = element;
+		}
+	}
+	assert(arr[0] == 0);
+	cout << "Before arr = " << arr << '\n';
+	arr[0] = 100;
+	assert(arr[0] == 100);
+	cout << "arr[0] = 100" << '\n';
+	cout << "\nAfter arr = " << arr << '\n';
+
+	cout << "\n--------------------------------------\n";
+	cout << "<< Operator Test: Passed!";
+	cout << "\n--------------------------------------\n";	
+}
