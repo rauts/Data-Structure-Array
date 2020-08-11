@@ -66,6 +66,15 @@ Array& Array::operator=(Array const& rhs)
 	return *this;
 }
 
+Array::Array(Array&& arr) noexcept
+{
+	mArraySize = std::move(arr.mArraySize);
+	mPtr = std::move(arr.mPtr);
+	// let arr be in a safe state (default state)
+	arr.mArraySize = 0;
+	arr.mPtr = nullptr;
+}
+
 //void Array::add_value(int index, int value) {
 //	mPtr[index] = value;
 //}
