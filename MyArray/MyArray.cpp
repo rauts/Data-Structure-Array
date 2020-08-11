@@ -19,7 +19,8 @@ int main()
 
     //TestCopyConstructor();
 
-    TestAssignmentOperator();
+    //TestAssignmentOperator();
+    TestMoveConstructor();
 
     return 0;
 
