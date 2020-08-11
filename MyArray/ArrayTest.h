@@ -8,3 +8,4 @@ void TestIndirectionOperator();
 void TestCopyConstructor();
 void TestAssignmentOperator();
 void TestMoveConstructor();
+void TestMoveAssignmentOperator();
