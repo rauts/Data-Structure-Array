@@ -59,3 +59,26 @@ void TestIndirectionOperator() {
 	cout << "<< Operator Test: Passed!";
 	cout << "\n--------------------------------------\n";	
 }
+
+void TestCopyConstructor() {
+	Array arr{ 3 };
+	if (arr.Size() > 0) {
+		for (auto element{ 0 }; element < arr.Size(); element++) {
+			arr[element] = element + 1;
+		}
+	}
+	assert(arr[0] == 1);
+
+	cout << "Before arr = " << arr << '\n';
+	
+	Array arr2{ arr };
+	//arr2 = arr; // default assignment operator is called
+	assert(arr2[1] == 2);
+	cout << "After copy constructor arr2 = " << arr2 << '\n';
+
+
+	cout << "\n--------------------------------------\n";
+	cout << "Copy Constructor Test: Passed!";
+	cout << "\n--------------------------------------\n";
+
+}
