@@ -75,6 +75,19 @@ Array::Array(Array&& arr) noexcept
 	arr.mPtr = nullptr;
 }
 
+Array& Array::operator=(Array&& arr)
+{
+	if (this != &arr) {
+		mArraySize = std::move(arr.mArraySize);
+		mPtr = std::move(arr.mPtr);
+
+		// 
+		arr.mArraySize = 0;
+		arr.mPtr = nullptr;
+	}
+	return *this;
+}
+
 //void Array::add_value(int index, int value) {
 //	mPtr[index] = value;
 //}
