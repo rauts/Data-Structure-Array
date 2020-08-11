@@ -17,7 +17,9 @@ int main()
 
     //TestIndirectionOperator(); // <<
 
-    TestCopyConstructor();
+    //TestCopyConstructor();
+
+    TestAssignmentOperator();
 
     return 0;
 
