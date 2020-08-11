@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+using std::cout;
+
+#include "Array.h"
 #include "ArrayTest.h"
 
 int main()
@@ -9,7 +12,9 @@ int main()
     TestDefaultConstructor();
 
     TestParametricConstructor();
-   
+    
+    TestSquareBracketOperator();
+
 
 }
 
