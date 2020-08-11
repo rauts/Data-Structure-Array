@@ -39,3 +39,18 @@ int& Array::operator[](const int index) {
 //void Array::add_value(int index, int value) {
 //	mPtr[index] = value;
 //}
+
+std::ostream& operator<<(std::ostream& os, const Array& arr) {
+	if (arr.IsEmpty()) {
+		os << "Empty Array\n";
+	}
+	else {
+		os << "[";
+			for (int i{ 0 }; i < arr.Size(); i++) {
+			os << arr[i] << " ";
+		}
+		os << "]\n";
+	}
+
+	return os;
+}
