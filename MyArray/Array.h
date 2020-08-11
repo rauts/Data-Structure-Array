@@ -41,6 +41,8 @@ public:
 	int operator [](const int index) const; // reading
 	int& operator [](const int index); // writing
 	
+	// copy constructors
+	Array(Array const& arr);
 
 };
 
