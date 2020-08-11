@@ -36,6 +36,21 @@ int& Array::operator[](const int index) {
 	return mPtr[index];
 }
 
+Array::Array(Array const& arr)
+{
+	// allocate memory
+	if (!arr.IsEmpty()) {
+		mArraySize = arr.mArraySize;
+		mPtr = nullptr;
+		mPtr = new int[mArraySize] {};
+
+		// element wise copy
+		for (auto element{ 0 }; element < mArraySize; element++) {
+			mPtr[element] = arr.mPtr[element];
+		}
+	}
+}
+
 //void Array::add_value(int index, int value) {
 //	mPtr[index] = value;
 //}
