@@ -50,6 +50,9 @@ public:
 	// move constructor
 	Array(Array&& arr) noexcept;
 
+	// move assignment
+	Array& operator= (Array&& arr);
+
 };
 
 std::ostream& operator <<(std::ostream& os, const Array& arr);
