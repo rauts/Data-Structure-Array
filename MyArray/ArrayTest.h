@@ -7,3 +7,4 @@ void TestSquareBracketOperator();
 void TestIndirectionOperator();
 void TestCopyConstructor();
 void TestAssignmentOperator();
+void TestMoveConstructor();
