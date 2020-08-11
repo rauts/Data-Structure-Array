@@ -37,7 +37,10 @@ public:
 	void PrintArray() const;
 	bool IsmPtrNull() const;
 
-	//friend std::ostream& operator <<(std::ostream& os, const Array& arr);
+	// define Array properties
+	int operator [](const int index) const; // reading
+	int& operator [](const int index); // writing
+	
 
 };
 
