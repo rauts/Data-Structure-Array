@@ -47,6 +47,9 @@ public:
 	// copy assignment operator
 	Array& operator = (Array const& arr);
 
+	// move constructor
+	Array(Array&& arr) noexcept;
+
 };
 
 std::ostream& operator <<(std::ostream& os, const Array& arr);
