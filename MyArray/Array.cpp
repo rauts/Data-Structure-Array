@@ -1,8 +1,8 @@
 #include "Array.h"
 
-bool Array::IsArrayIndexValid(int index)
+bool Array::IsArrayIndexValid(int index) const
 {
-	return (index >= 0 && index < mArraySize);
+	return (index >= 0) && (index < mArraySize);
 }
 
 Array::Array(int size) {
@@ -33,11 +33,20 @@ bool Array::IsmPtrNull() const {
 
 // reading 
 int Array::operator[](const int index) const {	
+	if (!IsArrayIndexValid(index)) {
+		// TO DO implement outbounds exception;
+
+	}
+
 	return mPtr[index];
 }
 
 // writing
 int& Array::operator[](const int index) {
+	if (!IsArrayIndexValid(index)) {
+		// TO DO implement outbounds exception;
+
+	}
 	return mPtr[index];
 }
 
