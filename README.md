@@ -5,7 +5,7 @@
 In progress
 
 ### Project Description
-The project is about implementing a custom array data structure in modern `C++17` using object-oriented programming (OOP) paradigm. To highlight the OOP paradigm, the following programming constructs have been used in developing the project, however the list may grow in the future:
+The project is about implementing a custom array data structure in modern `C++17` using object-oriented programming (OOP) paradigm. To highlight the OOP paradigm, the following programming constructs have been used in developing the project. However, the list may grow or change depending on available resources (e.g. time) in the future:
 
   - Class
   - Operator overloading
@@ -24,7 +24,9 @@ Both header (.h) and implementation (.cpp) files can be found in the folder `MyA
 
 Users are requested to compile and build the codes in `Microsoft Visual Studio Community 2019 (Version 16.6.3.)` as I have successfully built the whole project in this version of MSVS IDE. 
 
-Since the test codes are also provided in the same folder, users can verify whether codes work as intended. Users are also encouraged to add more tests codes to enhance their understanding and increase the robustness of the current implementations as well. Hands of suggestions, comments, feedback or colaboration will be highly appreciated.  
+Since the test codes are also provided in the same folder, users are encouraged to play with the test codes to enhance their understanding about the codes. Users are also encouraged to add more tests codes to increase the robustness of the current implementations as well. 
+
+Hands of suggestions, comments, feedback or colaboration will be highly appreciated.  
  
 
 ### Contributing
