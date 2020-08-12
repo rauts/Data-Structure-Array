@@ -4,6 +4,11 @@
 #include <iostream>
 using std::cout;
 
+
+#include <memory> // for shared_ptr and make_shared
+using std::make_shared;
+using std::shared_ptr;
+
 #include "Array.h"
 #include "ArrayTest.h"
 
@@ -23,7 +28,17 @@ int main()
 
     //TestMoveConstructor();
 
-    TestMoveAssignmentOperator();
+    // TestMoveAssignmentOperator();
+
+    TestIndexOutOfBoundException();
+
+    //shared_ptr<int> myArray(new int[5], std::default_delete<int[]>());
+    //myArray.get()[0] = 0;
+    //myArray.get()[2] = 2;
+    //myArray.get()[1] = 1;
+    //cout << myArray.get()[2] << '\n';
+
+
 
     return 0;
 
