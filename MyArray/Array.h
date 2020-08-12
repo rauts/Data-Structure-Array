@@ -15,6 +15,8 @@ private:
 	int mArraySize{0};
 	int* mPtr{ nullptr }; // integer pointer pointing to nothing; it needs an address
 
+	bool IsArrayIndexValid(int); 
+
 public:
 	
 	// default constructor
