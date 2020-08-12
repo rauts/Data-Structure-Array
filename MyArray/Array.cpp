@@ -1,5 +1,10 @@
 #include "Array.h"
 
+bool Array::IsArrayIndexValid(int index)
+{
+	return (index >= 0 && index < mArraySize);
+}
+
 Array::Array(int size) {
 	if (size != 0) {
 		mArraySize = size;
