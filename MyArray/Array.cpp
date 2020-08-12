@@ -1,4 +1,5 @@
 #include "Array.h"
+#include "IndexOutOfBoundException.h"
 
 bool Array::IsArrayIndexValid(int index) const
 {
@@ -33,20 +34,41 @@ bool Array::IsmPtrNull() const {
 
 // reading 
 int Array::operator[](const int index) const {	
-	if (!IsArrayIndexValid(index)) {
-		// TO DO implement outbounds exception;
-
+	try {
+		if (!IsArrayIndexValid(index)) {
+			throw IndexOutOfBoundException();
+		}
 	}
+	catch (std::exception &e) {
+		std::cout << e.what();
+	}
+	catch (...) {
+		std::cout << "Unknown exception is caught!\n";	
+	}
+	
 
 	return mPtr[index];
 }
 
 // writing
 int& Array::operator[](const int index) {
-	if (!IsArrayIndexValid(index)) {
-		// TO DO implement outbounds exception;
+	try {
+		if (!IsArrayIndexValid(index)) {
 
+			throw IndexOutOfBoundException();
+			//throw std::range_error("Array Index Out of Bound");
+		}
 	}
+	catch (std::exception& e) {
+		std::cout << e.what();
+		// terminate the application
+		exit(0); // need a better way to handle the exception 
+		
+	}
+	catch (...) {
+		std::cout << "Unknown exception is caught!\n";
+	}
+
 	return mPtr[index];
 }
 
