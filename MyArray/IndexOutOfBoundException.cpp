@@ -2,5 +2,5 @@
 
 const char* IndexOutOfBoundException::what() const noexcept
 {
-	return "Exception: IndexOutOfBound";
+	return "\nException: IndexOutOfBound\n";
 }
