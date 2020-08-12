@@ -9,3 +9,4 @@ void TestCopyConstructor();
 void TestAssignmentOperator();
 void TestMoveConstructor();
 void TestMoveAssignmentOperator();
+void TestIndexOutOfBoundException();
