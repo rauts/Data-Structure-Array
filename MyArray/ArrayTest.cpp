@@ -155,8 +155,21 @@ void TestMoveAssignmentOperator()
 	assert(arr.IsEmpty());
 	cout << "After move assignement operator arr2 = " << arr2 << '\n';
 
-
 	cout << "\n--------------------------------------\n";
 	cout << "Move Assignment Operator Test: Passed!";
 	cout << "\n--------------------------------------\n";
+}
+
+void TestIndexOutOfBoundException() {
+	Array arr{ 2 };
+	arr[0] = 1;
+	arr[1] = 2;
+	assert(arr[0] == 1);
+	assert(!arr.IsEmpty());
+
+	cout << "Before arr = " << arr << '\n';
+
+	cout << "arr[3] = " << arr[3];
+
+	
 }
