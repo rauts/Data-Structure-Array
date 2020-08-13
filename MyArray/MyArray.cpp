@@ -9,8 +9,11 @@ using std::cout;
 using std::make_shared;
 using std::shared_ptr;
 
-#include "Array.h"
-#include "ArrayTest.h"
+//#include "Array.h"
+//#include "ArrayTest.h"
+
+#include "ArrayTemplate.h"
+#include "ArrayTestTemplate.h"
 
 int main()
 {
@@ -28,7 +31,7 @@ int main()
 
     //TestMoveConstructor();
 
-    // TestMoveAssignmentOperator();
+    //TestMoveAssignmentOperator();
 
     TestIndexOutOfBoundException();
 

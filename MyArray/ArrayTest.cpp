@@ -5,6 +5,7 @@ using std::cout;
 #include "ArrayTest.h"
 #include "Array.h"
 
+
 void TestDefaultConstructor(){
 	Array arr{};	
 	assert(arr.Size() == 0); // , "Default constructor should have a zero ArraySize!");
@@ -169,7 +170,9 @@ void TestIndexOutOfBoundException() {
 
 	cout << "Before arr = " << arr << '\n';
 
-	cout << "arr[3] = " << arr[3];
+	cout << "arr[3] = 5 \n";
+	// cause out of range error
+	arr[3] = 5;
 
 	
 }

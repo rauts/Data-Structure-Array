@@ -41,9 +41,13 @@ int Array::operator[](const int index) const {
 	}
 	catch (std::exception &e) {
 		std::cout << e.what();
+		// terminate the application
+		exit(0); // need a better way to handle the exception 
 	}
 	catch (...) {
 		std::cout << "Unknown exception is caught!\n";	
+		// terminate the application
+		exit(0); // need a better way to handle the exception 
 	}
 	
 
@@ -61,12 +65,15 @@ int& Array::operator[](const int index) {
 	}
 	catch (std::exception& e) {
 		std::cout << e.what();
+
 		// terminate the application
 		exit(0); // need a better way to handle the exception 
 		
 	}
 	catch (...) {
 		std::cout << "Unknown exception is caught!\n";
+		// terminate the application
+		exit(0); // need a better way to handle the exception 
 	}
 
 	return mPtr[index];
@@ -89,13 +96,13 @@ Array::Array(Array const& arr)
 
 Array& Array::operator=(Array const& rhs)
 {
-	if (mPtr != rhs.mPtr) {
+	if (this != &rhs) {
 		mArraySize = rhs.mArraySize;
 		// memory allocation
 		mPtr = nullptr;
 		mPtr = new int[mArraySize] {};
 		// elementwise copy
-		for (auto index{ 0 }; index < rhs.Size(); index++) {
+		for (int index{ 0 }; index < rhs.Size(); index++) {
 			mPtr[index] = rhs.mPtr[index];
 		}	
 	}
@@ -111,7 +118,7 @@ Array::Array(Array&& arr) noexcept
 	arr.mPtr = nullptr;
 }
 
-Array& Array::operator=(Array&& arr)
+Array& Array::operator=(Array&& arr) noexcept
 {
 	if (this != &arr) {
 		mArraySize = std::move(arr.mArraySize);

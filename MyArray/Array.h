@@ -53,7 +53,7 @@ public:
 	Array(Array&& arr) noexcept;
 
 	// move assignment
-	Array& operator= (Array&& arr);
+	Array& operator= (Array&& arr) noexcept;
 
 };
 
