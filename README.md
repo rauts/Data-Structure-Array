@@ -2,7 +2,9 @@
  **Data-Structure-Custum-Array**
 
 ### Project Status
-In progress
+Complete
+
+Further improvements for example, additional features like reset(), insert(), push_back() functions etc., can be added in the future version. 
 
 ### Project Description
 The project is about implementing a custom array data structure in modern `C++17` using object-oriented programming (OOP) paradigm. To highlight the OOP paradigm, the following programming constructs have been used in developing the project. However, the list may grow or change depending on available resources (e.g. time) in the future:
@@ -10,11 +12,9 @@ The project is about implementing a custom array data structure in modern `C++17
   - Class
   - Operator overloading
   - Move semantics
-  - Smart pointers
   - Exception
   - Template
   - Inheritance
-  - Polymorphism
   - Encapsulation
   - Design pattern
 
@@ -55,3 +55,7 @@ IDE
 ### License
 
 The project materials are available under [MIT](https://choosealicense.com/licenses/mit/) lincense.
+
+### Acknowledgement
+
+The course `Introduction to Data Structures and Algorithms in C++` in Pluralsight was very helpful to understand problems and to generate ideas to implement own custom data structures. I would like to thank instructor `Giovanni Dicanio` and `Pluralsight` for creating a very useful course.  
